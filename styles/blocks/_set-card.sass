@@ -1,0 +1,31 @@
+.set-card
+    $orange: linear-gradient(89.79deg, #EF4D08 0.16%, #EF4D08 7.36%, #F04E0A 14.57%, #F0500C 21.77%, #F1520F 28.98%, #F35613 36.18%, #F45917 43.38%, #F65D1C 50.59%, #F86222 57.79%, #FA6627 64.99%, #FB6A2B 72.2%, #FD6D2F 79.4%, #FE6F32 86.61%, #FE7135 93.81%, #FF7236 101.01%, #FF7236 108.22%), #EF4D08
+    $yellow: linear-gradient(90deg, #F0AD00 0%, #F0AD00 0.01%, #F9CB56 100%), #F0AD00
+    $green: linear-gradient(90deg, #81B93C 0%, #9FD062 100%), #81B93C
+    $purple: linear-gradient(90deg, #724941 0%, #7F5952 100%), #724341
+
+    &--orange
+        background: $orange
+    &--yellow
+        background: $yellow
+    &--green
+        background: $green
+    &--purple
+        background: $purple
+
+    width: 401px
+    border-radius: 21px
+    background-size: 100% 100%
+    padding: 18px 22px 32px
+    &__icon
+        width: 45px
+        margin-right: 10px
+    .wrap-flex
+        justify-content: space-between
+        margin-top: 6px
+    &__title
+        font-size: 24px
+    &__price
+        font-size: 39px
+        span
+            font-size: 28px

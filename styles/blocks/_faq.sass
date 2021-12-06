@@ -1,0 +1,48 @@
+.faq
+    $text-color: #7E7E7E
+    $height-content: 300px //установить высоту больше чем контент в спойлере (включая падинги)
+    &__spoiler
+        margin-top: 32px 
+    .spoiler
+        border-bottom: $border
+        padding-bottom: 32px 
+        &__header
+            justify-content: space-between
+        &__title
+            @include font($mulish-font, 600, 1.32)
+            font-size: 24px
+        &__btn
+            width: 24px
+            height: 24px
+            background-color: transparent
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            &:hover
+                cursor: pointer
+        &__content
+            padding-right: 0px 
+            overflow: hidden
+        &__text
+            @include font($ssp-font, 400, 1.32)
+            font-size: 18px
+            color: $text-color
+        &.collapsed
+            .spoiler__content
+                visibility: hidden
+                opacity: 0
+                max-height: 0px
+                padding-top: 0px
+                transition: all .2s linear
+            .spoiler__btn
+                background-image: url('/images/plus.svg')
+                transition: background-image .2s linear
+        &.deployed
+            .spoiler__content
+                visibility: visible
+                opacity: 1
+                max-height: $height-content
+                padding-top: 20px
+                transition: all .2s linear
+            .spoiler__btn
+                background-image: url('/images/minus.svg')
+                transition: background-image .2s linear

@@ -1,0 +1,44 @@
+
+.control-card
+    $yellow: #F0AD00
+    $purple: #724941
+    $green: #81B93C
+
+    width: 334px
+    &--yellow
+        svg path
+            fill: $yellow
+        .control-card__body
+            border-color: $yellow
+    &--purple
+        svg path
+            fill: $purple
+        .control-card__body
+            border-color: $purple
+    &--green
+        svg path
+            fill: $green
+        .control-card__body
+            border-color: $green
+    &__title
+        @include font($mulish-font, 600, 1.15)
+        color: $brown-color
+        font-size: 24px
+        margin-left: 15px
+    &__body
+        position: relative
+        height: 466px
+        border-radius: 15px
+        border-width: 3.7px
+        border-style: solid
+        margin-top: 22px
+    &__btn
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        margin: auto
+        background-color: transparent
+        &:hover
+            cursor: pointer
+ 
